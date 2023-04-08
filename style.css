@@ -4,6 +4,15 @@ body {
     font-family: Arial, sans-serif;
   }
   
+  .nav-btn {
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .nav-btn:hover {
+    transform: scale(1.1);
+  }
+  
+
   header {
     display: flex;
     justify-content: space-between;
@@ -42,10 +51,12 @@ body {
     text-decoration: none;
     color: #fff;
     font-size: 24px;
+    transition: transform 0.2s;
   }
   
   nav a:hover {
     text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+    transform: scale(1.1);
   }
   
   .featured-images {
@@ -95,24 +106,12 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-    text-align: center;
-    font-size: 18px;
-    font-size: 16px;
-    margin-top: 10px;
-    line-height: 1.5;
-    text-align: center;
-    font-size: 16px;
-    margin-top: 10px;
-    line-height: 1.5;
-    text-align: center;
-  }
 
   
 
-  #featured {
+#featured {
     text-align: center;
     padding:
   
+
+
