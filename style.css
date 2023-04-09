@@ -54,9 +54,9 @@ body {
     transition: transform 0.2s;
   }
   
-  nav a:hover {
+  nav a:hover{
     text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
-    transform: scale(1.1);
+    transform: scale(1.2);
   }
   
   .featured-images {

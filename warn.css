@@ -3,15 +3,6 @@ body {
     color: #fff;
     font-family: Arial, sans-serif;
   }
-
-.nav-btn {
-    transition: all 0.2s ease-in-out;
-  }
-  
-.nav-btn:hover {
-    transform: scale(1.1);
-  }
-  
   
 
 #warning-container {
