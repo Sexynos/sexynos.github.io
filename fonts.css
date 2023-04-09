@@ -1,0 +1,32 @@
+$font-path: 'fonts/';
+
+$font-weights: (
+  'regular': 400,
+  'medium': 500,
+  'light': 300,
+  'thin': 100,
+  'bold': 700
+);
+
+$font-styles: (
+  'normal',
+  'italic'
+);
+
+@each $font-weight, $weight-value in $font-weights {
+  @each $font-style in $font-styles {
+    $font-name: 'SamsungSans-#{$font-weight}' + if($font-style == 'italic', '-Italic', '');
+    $font-file: $font-path + 'SamsungSans-#{$font-weight}' + if($font-style == 'italic', '-Italic', '') + '.ttf';
+    @font-face {
+      font-family: 'Samsung Sans';
+      src: url('#{$font-file}') format('truetype');
+      font-weight: $weight-value;
+      font-style: $font-style;
+    }
+  }
+}
+
+body {
+  font-family: 'Samsung Sans', sans-serif;
+}
+
