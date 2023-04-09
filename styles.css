@@ -1,0 +1,60 @@
+/* Set background gradient */
+body {
+    background: linear-gradient(318deg, #432371, #4c255e, #54274b, #5d2939, #652b26, #6e2d13, #762f00);
+    background-size: 1400% 1400%;
+
+    -webkit-animation: AnimationName 20s ease infinite;
+    -moz-animation: AnimationName 20s ease infinite;
+    animation: AnimationName 20s ease infinite;
+}
+
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+  
+  /* Style the logo */
+  .logo {
+    width: 400px;
+    height: 400px;
+    margin: 50px auto;
+  }
+  
+  /* Style the button */
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #422d24;
+    background: none;
+    border: 2px solid #422d24;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  /* Add the glowing effect on hover */
+  .btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    filter: blur(30px);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: -1;
+  }
+  
+  .btn:hover::before {
+    opacity: 1;
+  }
+  
