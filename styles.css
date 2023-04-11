@@ -6,7 +6,28 @@ body {
     -webkit-animation: AnimationName 20s ease infinite;
     -moz-animation: AnimationName 20s ease infinite;
     animation: AnimationName 20s ease infinite;
-    overflow: hidden
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+body, html {
+  height: 100%;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 @keyframes AnimationName {
@@ -16,6 +37,7 @@ body {
 }
 
 /* Style the logo */
+
 .logo-container {
     display: flex;
     flex-direction: column;
@@ -24,7 +46,7 @@ body {
     height: 100vh}
   
   .logo {
-    width: 512px;
+    max-width: 30%;
     height: auto;
   }
   
@@ -34,7 +56,16 @@ body {
     font-size: 50px;
     color: #fff;
     margin-top: 20px;
-  }
+    position: absolute;
+    top: calc(50% + 60px);
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 100%;
+    transition: font-size 1.5s ease-out;;
+}
+.logo-text.animate {
+  font-size: 300%;
+}
   
   /* Style the button */
   .btn-container {
@@ -62,5 +93,8 @@ body {
     text-transform: uppercase;
     border-radius: 10px;
     transition: background-color 0.3s ease;
-  
+    position: absolute;
+    top: calc(50% + 160px);
+    left: 50%;
+    transform: translateX(-50%);
   }

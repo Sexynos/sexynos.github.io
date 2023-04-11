@@ -12,3 +12,8 @@ document.addEventListener('click', () => {
     cursor.classList.remove('expand');
   }, 500);
 });
+
+window.addEventListener("load", function() {
+  var logoText = document.querySelector(".logo-text");
+  logoText.classList.add("animate");
+});
